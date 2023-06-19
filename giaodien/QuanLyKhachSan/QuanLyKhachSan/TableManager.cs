@@ -19,13 +19,10 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
             loadRoom();
-            LoadComboBoxRoom(cbSwitchRoomNew);
-            LoadComboBoxRoom(cbSwitchRoomOld);
         }
         #region Method
         void loadRoom()
         {
-            
             List<Room> roomList = RoomDAO.Instance.LoadRoomList();
             foreach (Room item in roomList)
             {
@@ -49,25 +46,15 @@ namespace QuanLyKhachSan
                 flpTable.Controls.Add(btn);
             }
         }
-        void showVoucher(int maphong)
+        void showVoucher(int maphieuthuephong)
         {
-            listVoucher1.Items.Clear();
-            List<VoucherInfo> listVoucherInfo = VoucherInfoDAO.Instance.GetListVoucherInfo(VoucherDAO.Instance.GetUncheckVoucherByRoom(maphong));
+          List<VoucherInfo> listVoucherInfo = VoucherInfoDAO.Instance.GetListVoucherInfo(VoucherDAO.Instance.GetUncheckVoucherByRoom(maphieuthuephong));
             foreach (VoucherInfo item in listVoucherInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.Maphieuthuephong.ToString());
-                lsvItem.SubItems.Add(item.Maloaikhach.ToString());
-                lsvItem.SubItems.Add(item.Cmnd.ToString());
                 lsvItem.SubItems.Add(item.Tenkhachhang.ToString());
-                lsvItem.SubItems.Add(item.Diachi.ToString());
-                lsvItem.SubItems.Add(item.Maphong.ToString());
                 listVoucher1.Items.Add(lsvItem);
             }
-        }
-        void LoadComboBoxRoom(ComboBox cb)
-        {
-            cb.DataSource = RoomDAO.Instance.LoadRoomList();
-            cb.DisplayMember = "MaPhong";
         }
 
         #endregion
@@ -106,10 +93,7 @@ namespace QuanLyKhachSan
 
         private void phiếuThuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RoomRentVoucher f = new RoomRentVoucher();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+
         }
         #endregion
 
@@ -130,17 +114,5 @@ namespace QuanLyKhachSan
             f.ShowDialog();
             this.Show();
         }
-
-        private void btnSwitchRoom_Click(object sender, EventArgs e)
-        {
-            int MaPhongMot = (cbSwitchRoomOld.SelectedItem as Room).Maphong;
-            int MaPhongHai = (cbSwitchRoomNew.SelectedItem as Room).Maphong;
-            if (MessageBox.Show(string.Format("Bạn có muốn chuyển phòng {0} qua phòng {1} không?", MaPhongHai, MaPhongMot), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                RoomDAO.Instance.SwitchRoom(MaPhongMot, MaPhongHai);
-                flpTable.Controls.Clear();
-                loadRoom();
-            }
-        } 
     }
 }

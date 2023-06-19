@@ -47,17 +47,12 @@
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBookRoom = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.listVoucher1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSwitchRoom = new System.Windows.Forms.Button();
-            this.cbSwitchRoomNew = new System.Windows.Forms.ComboBox();
-            this.cbSwitchRoomOld = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,7 +70,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1129, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1016, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -235,10 +230,10 @@
             // 
             // btnBookRoom
             // 
-            this.btnBookRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookRoom.Location = new System.Drawing.Point(693, 457);
+            this.btnBookRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookRoom.Location = new System.Drawing.Point(781, 503);
             this.btnBookRoom.Name = "btnBookRoom";
-            this.btnBookRoom.Size = new System.Drawing.Size(133, 38);
+            this.btnBookRoom.Size = new System.Drawing.Size(223, 41);
             this.btnBookRoom.TabIndex = 56;
             this.btnBookRoom.Text = "Đặt phòng";
             this.btnBookRoom.UseVisualStyleBackColor = true;
@@ -246,22 +241,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listVoucher1);
             this.panel1.Location = new System.Drawing.Point(693, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 414);
+            this.panel1.Size = new System.Drawing.Size(311, 460);
             this.panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chi tiết phiêu thuê phòng";
             // 
             // listVoucher1
             // 
@@ -271,12 +255,11 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader5});
             this.listVoucher1.GridLines = true;
-            this.listVoucher1.Location = new System.Drawing.Point(3, 51);
+            this.listVoucher1.Location = new System.Drawing.Point(3, 270);
             this.listVoucher1.Name = "listVoucher1";
-            this.listVoucher1.Size = new System.Drawing.Size(371, 359);
+            this.listVoucher1.Size = new System.Drawing.Size(305, 187);
             this.listVoucher1.TabIndex = 0;
             this.listVoucher1.UseCompatibleStateImageBehavior = false;
             this.listVoucher1.View = System.Windows.Forms.View.Details;
@@ -301,49 +284,11 @@
             // 
             this.columnHeader5.Text = "Địa chỉ";
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Mã phòng";
-            // 
-            // btnSwitchRoom
-            // 
-            this.btnSwitchRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSwitchRoom.Location = new System.Drawing.Point(832, 457);
-            this.btnSwitchRoom.Name = "btnSwitchRoom";
-            this.btnSwitchRoom.Size = new System.Drawing.Size(247, 38);
-            this.btnSwitchRoom.TabIndex = 57;
-            this.btnSwitchRoom.Text = "Chuyển phòng";
-            this.btnSwitchRoom.UseVisualStyleBackColor = true;
-            this.btnSwitchRoom.Click += new System.EventHandler(this.btnSwitchRoom_Click);
-            // 
-            // cbSwitchRoomNew
-            // 
-            this.cbSwitchRoomNew.DropDownWidth = 169;
-            this.cbSwitchRoomNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSwitchRoomNew.FormattingEnabled = true;
-            this.cbSwitchRoomNew.Location = new System.Drawing.Point(832, 501);
-            this.cbSwitchRoomNew.Name = "cbSwitchRoomNew";
-            this.cbSwitchRoomNew.Size = new System.Drawing.Size(118, 33);
-            this.cbSwitchRoomNew.TabIndex = 58;
-            // 
-            // cbSwitchRoomOld
-            // 
-            this.cbSwitchRoomOld.DropDownWidth = 169;
-            this.cbSwitchRoomOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSwitchRoomOld.FormattingEnabled = true;
-            this.cbSwitchRoomOld.Location = new System.Drawing.Point(961, 501);
-            this.cbSwitchRoomOld.Name = "cbSwitchRoomOld";
-            this.cbSwitchRoomOld.Size = new System.Drawing.Size(118, 33);
-            this.cbSwitchRoomOld.TabIndex = 59;
-            // 
             // TableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 549);
-            this.Controls.Add(this.cbSwitchRoomOld);
-            this.Controls.Add(this.cbSwitchRoomNew);
-            this.Controls.Add(this.btnSwitchRoom);
+            this.ClientSize = new System.Drawing.Size(1016, 549);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBookRoom);
             this.Controls.Add(this.flpTable);
@@ -363,7 +308,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,10 +340,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSwitchRoom;
-        private System.Windows.Forms.ComboBox cbSwitchRoomNew;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ComboBox cbSwitchRoomOld;
     }
 }

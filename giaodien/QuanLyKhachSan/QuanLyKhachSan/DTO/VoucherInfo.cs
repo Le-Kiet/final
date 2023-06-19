@@ -16,9 +16,8 @@ namespace QuanLyKhachSan.DTO
             this.Cmnd = cmnd;
             this.Tenkhachhang = tenkhachhang;
             this.Diachi = diachi;
-            //this.Maphong = maphong;
         }
-        private int maphong;
+
         private int maphieuthuephong;
         private string maloaikhach;
         private string cmnd;
@@ -32,7 +31,6 @@ namespace QuanLyKhachSan.DTO
             this.Cmnd = row["cmnd"].ToString();
             this.Tenkhachhang = row["tenkhachhang"].ToString();
             this.Diachi = row["diachi"].ToString();
-            //this.Maphong = (int)row["maphong"];
         }
         public int Maphieuthuephong
         {
@@ -96,19 +94,6 @@ namespace QuanLyKhachSan.DTO
             set
             {
                 diachi = value;
-            }
-        }
-
-        public int Maphong
-        {
-            get
-            {
-                return maphong;
-            }
-
-            set
-            {
-                maphong = value;
             }
         }
     }

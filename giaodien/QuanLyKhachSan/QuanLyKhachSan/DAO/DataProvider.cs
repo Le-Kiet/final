@@ -46,7 +46,7 @@ namespace QuanLyKhachSan.DAO
                 return data;
             }    
          }
-        public int ExecutenonQuery(string query, object[] parameter = null)
+        public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
             using (SqlConnection connection = new SqlConnection(connectionSTR))

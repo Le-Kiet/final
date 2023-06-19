@@ -21,9 +21,9 @@ namespace QuanLyKhachSan.DAO
         {
         
         }
-        public int GetUncheckVoucherByRoom(int maphong)
+        public int GetUncheckVoucherByRoom(int maphieuthuephong)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from PHIEUTHUEPHONG where MaPhong ="+ maphong);
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from PHIEUTHUEPHONG where MaPhieuThuePhong ="+ maphieuthuephong);
             if (data.Rows.Count > 0)
             {
                 Voucher voucher = new Voucher(data.Rows[0]);

@@ -9,7 +9,7 @@ namespace QuanLyKhachSan.DTO
 {
     public class Room
     {
-        public Room (int maphong, string tenphong, string maloaiphong)
+        public Room (int maphong, string tenphong, string maloaiphong, string tinhtrangphong)
         {
             this.Maphong = maphong;
             this.Tenphong = tenphong;
@@ -18,7 +18,14 @@ namespace QuanLyKhachSan.DTO
         }
         public Room(DataRow row)
         {
-            this.Maphong = (int)row["maphong"];
+            //this.Maphong = (int)row["maphong"];
+            //this.Tenphong = row["tenphong"].ToString();
+            //this.Maloaiphong = row["maloaiphong"].ToString();
+            //this.Tinhtrangphong = row["tinhtrangphong"].ToString();
+            if (row["maphong"] is int)
+                this.Maphong = (int)row["maphong"];
+
+
             this.Tenphong = row["tenphong"].ToString();
             this.Maloaiphong = row["maloaiphong"].ToString();
             this.Tinhtrangphong = row["tinhtrangphong"].ToString();
